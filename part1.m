@@ -1,23 +1,23 @@
- 
+
 %% Machine Learning 1, Summer Term 2015, Problem Sheet 1
 
 %% Initialization
 clear ; close all; clc
 
 %% ==================== Part 1: t-SNE data set ====================
-% Problem 2 
+% Problem 2
 fprintf('Loading t-SNE traning data set \n');
 
-if ~exist('data.mat', 'file')
+if ~exist('tsne_data.mat', 'file')
 	data = csvread('train_tsne_1000.csv', 1, 0);
-    save data.mat
+    save tsne_data.mat
 else
-    load data.mat
-end    
-    
+    load tsne_data.mat
+end
+
 fprintf('Program paused. Press enter to continue.\n');
 pause;
-    
+
 fprintf('Plotting data. \n');
 
 X = data(:, 1:2);
