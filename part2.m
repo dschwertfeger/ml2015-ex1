@@ -27,7 +27,7 @@ sample_sizes = [1000, 5000, 10000, 20000, 50000, 61870];
 
 for sample_size = sample_sizes
     fprintf(['Running leave-one-out cross-validation on a sample size '...
-        'of %d. \n'], sample_size);
+        'of %.0f. \n'], sample_size);
 
     sample = training_data(1:sample_size , :);
 
